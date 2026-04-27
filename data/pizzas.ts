@@ -13,7 +13,8 @@ export const pizzas: IPizza[] = [
       { size: PizzaSize.EXTRA_LARGE, price: 18.99 },
     ],
     categories: [PizzaCategory.VEGETARIAN, PizzaCategory.CLASSIC],
-    imageUrl: "/images/pizzas/margherita.jpg",
+    imageUrl:
+      "https://lilluna.com/wp-content/uploads/2025/10/margherita-pizza-resize-8-1.jpg",
   },
   {
     id: 2,
@@ -26,7 +27,8 @@ export const pizzas: IPizza[] = [
       { size: PizzaSize.EXTRA_LARGE, price: 19.99 },
     ],
     categories: [PizzaCategory.MEAT, PizzaCategory.CLASSIC],
-    imageUrl: "/images/pizzas/pepperoni.jpg",
+    imageUrl:
+      "https://assets-us-01.kc-usercontent.com/4353bced-f940-00d0-8c6e-13a0a4a7f5c2/2ac60829-5178-4a6e-80cf-6ca43d862cee/Quick-and-Easy-Pepperoni-Pizza-700x700.jpeg",
   },
   {
     id: 3,
@@ -40,7 +42,8 @@ export const pizzas: IPizza[] = [
       { size: PizzaSize.EXTRA_LARGE, price: 20.99 },
     ],
     categories: [PizzaCategory.MEAT, PizzaCategory.SPICY],
-    imageUrl: "/images/pizzas/diavola.jpg",
+    imageUrl:
+      "https://www.windingcreekranch.org/wp-content/uploads/2025/08/diavola-pizza-recipe-finished-1-of-1-11.jpg",
   },
   {
     id: 4,
@@ -54,7 +57,8 @@ export const pizzas: IPizza[] = [
       { size: PizzaSize.EXTRA_LARGE, price: 19.99 },
     ],
     categories: [PizzaCategory.VEGETARIAN, PizzaCategory.CLASSIC],
-    imageUrl: "/images/pizzas/four-cheese.jpg",
+    imageUrl:
+      "https://kitchenatics.com/wp-content/uploads/2020/09/Cheese-pizza-1.jpg",
   },
   {
     id: 5,
@@ -68,7 +72,8 @@ export const pizzas: IPizza[] = [
       { size: PizzaSize.EXTRA_LARGE, price: 21.49 },
     ],
     categories: [PizzaCategory.MEAT],
-    imageUrl: "/images/pizzas/bbq-chicken.jpg",
+    imageUrl:
+      "https://kristineskitchenblog.com/wp-content/uploads/2025/05/bbq-chicken-pizza-09-2.jpg",
   },
   {
     id: 6,
@@ -82,7 +87,8 @@ export const pizzas: IPizza[] = [
       { size: PizzaSize.EXTRA_LARGE, price: 19.49 },
     ],
     categories: [PizzaCategory.VEGETARIAN],
-    imageUrl: "/images/pizzas/veggie-garden.jpg",
+    imageUrl:
+      "https://gm8-sloopys-ggm.b-cdn.net/wp-content/uploads/2021/04/IMG_5045-scaled.jpg",
   },
   {
     id: 7,
@@ -96,7 +102,8 @@ export const pizzas: IPizza[] = [
       { size: PizzaSize.EXTRA_LARGE, price: 20.49 },
     ],
     categories: [PizzaCategory.VEGAN],
-    imageUrl: "/images/pizzas/vegan-supreme.jpg",
+    imageUrl:
+      "https://www.thursdaynightpizza.com/wp-content/uploads/2022/06/veggie-pizza-side-view-out-of-oven-720x480.png",
   },
   {
     id: 8,
@@ -110,7 +117,8 @@ export const pizzas: IPizza[] = [
       { size: PizzaSize.EXTRA_LARGE, price: 24.99 },
     ],
     categories: [PizzaCategory.SEAFOOD],
-    imageUrl: "/images/pizzas/shrimp-scampi.jpg",
+    imageUrl:
+      "https://cookingwithcurls.com/wp-content/uploads/2015/02/Original-Shrimp-Scampi-Pizza.-cookingwithcurls.com_.jpg",
   },
 ];
 

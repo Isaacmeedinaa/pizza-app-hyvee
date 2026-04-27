@@ -9,7 +9,7 @@ export const Header: React.FC = () => {
   const { onScrollToTopClick } = useHeader();
 
   return (
-    <div className="sticky top-0 z-50 flex items-center w-full min-w-full h-[70px] min-h-[70px] px-[20px]">
+    <div className="sticky top-0 z-50 flex items-center w-full min-w-full h-[70px] min-h-[70px] px-[20px] bg-[#0a0a0a]">
       <Image
         src={IsaacsPizzaLogo}
         alt="Isaac's Pizza Logo"
