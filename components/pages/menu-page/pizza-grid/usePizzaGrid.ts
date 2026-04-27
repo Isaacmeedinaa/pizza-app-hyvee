@@ -1,27 +1,51 @@
 import { useEffect, useState } from "react";
 import { IPizza } from "@/interfaces";
-import { pizzas as PizzasData } from "@/data/pizzas";
+import { API } from "@/services";
 
 export const usePizzaGrid = () => {
-  const [pizzas, setPizzas] = useState<IPizza[]>(PizzasData);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [pizzas, setPizzas] = useState<IPizza[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  // const fetchPizzas = () => {
-  //   setIsLoading(true);
-
-  //   const response = PizzasData;
-
-  //   setPizzas(response);
-
-  //   setIsLoading(false);
-  // };
-
   useEffect(() => {
-    // fetchPizzas();
+    const fetchPizzas = async () => {
+      try {
+        setIsLoading(true);
+        setError(null);
+
+        const response = await API.getPizzas();
+
+        const pizzaData = response.data.data.pizzas;
+
+        setPizzas(pizzaData);
+      } catch {
+        setError("Failed to fetch pizzas");
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchPizzas();
   }, []);
 
-  return { pizzas, isLoading, error };
+  const onRefetchPizzasClick = async () => {
+    try {
+      setIsLoading(true);
+      setError(null);
+
+      const response = await API.getPizzas();
+
+      const pizzaData = response.data.data.pizzas;
+
+      setPizzas(pizzaData);
+    } catch {
+      setError("Failed to fetch pizzas");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return { pizzas, isLoading, error, onRefetchPizzasClick };
 };
 
 export default usePizzaGrid;
