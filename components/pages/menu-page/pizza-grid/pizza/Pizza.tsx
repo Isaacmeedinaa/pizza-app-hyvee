@@ -3,12 +3,15 @@
 import React from "react";
 import IPizza from "@/interfaces/IPizza";
 import Image from "next/image";
+import usePizza from "./usePizza";
 
 interface IPizzaProps {
   pizza: IPizza;
 }
 
 export const Pizza: React.FC<IPizzaProps> = ({ pizza }) => {
+  const { onAddToCartClick } = usePizza(pizza);
+
   const initialPrice =
     pizza.pricing.length > 0 ? (
       <p className="text-md mt-[5px] font-semibold">
@@ -37,6 +40,12 @@ export const Pizza: React.FC<IPizzaProps> = ({ pizza }) => {
       <p className="text-md mt-[10px]">{pizza.description}</p>
       {initialPrice}
       {categories}
+      <button
+        onClick={onAddToCartClick}
+        className="mt-[15px] px-[10px] py-[15px] bg-[#fff] rounded-lg text-black font-bold cursor-pointer"
+      >
+        Add to Cart
+      </button>
     </div>
   );
 };

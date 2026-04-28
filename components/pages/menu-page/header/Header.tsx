@@ -6,7 +6,7 @@ import IsaacsPizzaLogo from "@/assets/images/isaacs-pizza-logo.png";
 import useHeader from "./useHeader";
 
 export const Header: React.FC = () => {
-  const { onScrollToTopClick } = useHeader();
+  const { onScrollToTopClick, cartCount } = useHeader();
 
   return (
     <div className="sticky top-0 z-50 flex items-center w-full min-w-full h-[70px] min-h-[70px] px-[20px] bg-[#0a0a0a]">
@@ -24,6 +24,12 @@ export const Header: React.FC = () => {
       >
         Isaac&apos;s Pizza Menu
       </h1>
+      <button
+        onClick={() => {}}
+        className="px-[10px] py-[5px] bg-[#fff] rounded-lg text-black font-bold cursor-pointer"
+      >
+        View Cart ({cartCount})
+      </button>
     </div>
   );
 };
